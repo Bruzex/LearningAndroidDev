@@ -1,7 +1,9 @@
 package com.example.firstapp
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -21,10 +23,24 @@ class SecondActivity : AppCompatActivity() {
         }
 
         val goToHomeBtn = findViewById<Button>(R.id.goToHomeBtn)
+        val openWebBtn = findViewById<Button>(R.id.openWeb)
+        val openCameraBtn = findViewById<Button>(R.id.openCamera)
+
         goToHomeBtn.setOnClickListener {
             showToast("Switching to Home Screen")
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        openWebBtn.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://sidharth-bhatla.netlify.app/")
+            startActivity(intent)
+        }
+
+        openCameraBtn.setOnClickListener {
+            val intent = Intent(Intent(MediaStore.ACTION_IMAGE_CAPTURE))
+            startActivity((intent))
         }
     }
     fun showToast(message : String){

@@ -17,7 +17,45 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="90dp"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To open our web page click below :"
+        android:textColor="#1556bf"
+        android:textStyle="italic"
+        android:textSize="17sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/openWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="Open Web" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To Open test camera access click below :"
+        android:textColor="#1556bf"
+        android:textStyle="italic"
+        android:textSize="17sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/openCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="Open Camera" />
 
     <Button
         android:id="@+id/goToHomeBtn"
